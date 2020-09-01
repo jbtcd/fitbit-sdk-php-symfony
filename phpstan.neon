@@ -1,0 +1,6 @@
+parameters:
+    excludes_analyse:
+        - vendor/
+    ignoreErrors:
+        # how to avoid excluding these?
+        - '#Call to an undefined method Symfony\\Component\\Config\\Definition\\Builder\\NodeDefinition::children\(\).#'

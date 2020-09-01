@@ -1,0 +1,52 @@
+{
+    "name": "jbtcd/fitbit-bundle",
+    "description": "A Symfony bundle for v1 of JBTCDs Fitbit SDK for PHP",
+    "type": "symfony-bundle",
+    "require": {
+        "php": "^7.4",
+        "symfony/config": "^5.0 || ^4.4",
+        "symfony/dependency-injection": "^5.0 || ^4.4",
+        "symfony/http-kernel": "^5.0 || ^4.4",
+        "jbtcd/fitbit": "0.1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0",
+        "squizlabs/php_codesniffer": "^3.5",
+        "phpmd/phpmd": "^2.8",
+        "php-parallel-lint/php-parallel-lint": "^1.0",
+        "phploc/phploc": "^6.0",
+        "phpstan/phpstan": "^0.12.14",
+        "sebastian/phpcpd": "^5.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jonah Böther",
+            "email": "mail@jbtcd.me"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "FitbitBundle\\": "src/"
+        }
+    },
+    "scripts": {
+        "phpcs": "vendor/bin/phpcs",
+        "phplint": "vendor/bin/parallel-lint . --exclude vendor",
+        "phpmd": "vendor/bin/phpmd ./src text cleancode,codesize,controversial,design,naming,unusedcode",
+        "phpunit": "vendor/bin/phpunit --coverage-text --colors=never",
+        "phploc": "vendor/bin/phploc src tests",
+        "phpstan": "vendor/bin/phpstan analyse -l 4 src tests -c phpstan.neon",
+        "phpcpd": "vendor/bin/phpcpd src tests",
+        "tests": [
+            "@phpcs",
+            "@phplint",
+            "@phpmd",
+            "@phpunit",
+            "@phploc",
+            "@phpstan",
+            "@phpcpd"
+        ]
+    },
+    "minimum-stability": "stable"
+}
