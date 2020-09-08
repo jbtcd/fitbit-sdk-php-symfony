@@ -17,6 +17,8 @@ To install, use composer:
 $ composer require jbtcd/fitbit-bundle
 ```
 
+Composer will aks you, if do you want to execute this recipe. You have to select `[y] Yes` at this point.
+
 ## Testing
 
 ``` bash
