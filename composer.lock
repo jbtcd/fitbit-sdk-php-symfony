@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "54e638edd65c07a7616fd6b996301f14",
+    "content-hash": "f34437b9ff98125473b8322df223d612",
     "packages": [
         {
             "name": "jbtcd/fitbit",

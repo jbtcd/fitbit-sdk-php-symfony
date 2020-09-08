@@ -48,11 +48,5 @@
             "@phpcpd"
         ]
     },
-    "extra": {
-        "thanks": {
-            "name": "jbtcd/fitbit",
-            "url": "https://github.com/jbtcd/fitbit-sdk-php"
-        }
-    },
     "minimum-stability": "stable"
 }
