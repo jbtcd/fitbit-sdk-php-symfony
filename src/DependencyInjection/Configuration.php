@@ -36,7 +36,7 @@ class Configuration implements ConfigurationInterface
                 'sleep',
                 'social',
                 'weight',
-            ])->defaultValue([])->end()
+            ])->defaultValue([])->end()->end()
             ->scalarNode('expiresIn')->defaultValue(86400)->end()
             ->scalarNode('redirectUrl')->defaultValue('')->end()
         ->end();
