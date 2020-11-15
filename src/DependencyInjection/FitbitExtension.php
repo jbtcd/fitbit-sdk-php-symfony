@@ -33,6 +33,8 @@ class FitbitExtension extends Extension
         $definition->setArgument('$clientId', $config['clientId']);
         $definition->setArgument('$clientSecret', $config['clientSecret']);
         $definition->setArgument('$scopes', $config['scopes']);
+        $definition->setArgument('$expiresIn', $config['expiresIn']);
+        $definition->setArgument('$redirectUrl', $config['redirectUrl']);
 
         $definition = $container->getDefinition('fitbitBundle.dataCollector');
         $definition->setArgument('$clientId', $config['clientId']);
