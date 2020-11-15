@@ -37,7 +37,7 @@ class Configuration implements ConfigurationInterface
                 'social',
                 'weight',
             ])->defaultValue([])->end()
-            ->integerNode('expiresIn')->defaultValue(86400)->end()
+            ->scalarNode('expiresIn')->defaultValue(86400)->end()
             ->scalarNode('redirectUrl')->defaultValue('')->end()
         ->end();
 
