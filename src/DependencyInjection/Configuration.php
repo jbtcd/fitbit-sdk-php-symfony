@@ -24,8 +24,8 @@ class Configuration implements ConfigurationInterface
         $treeBuilder = new TreeBuilder('fitbit');
 
         $treeBuilder->getRootNode()->children()
-            ->scalarNode('clientId')->defaultNull()->end()
-            ->scalarNode('clientSecret')->defaultNull()->end()
+            ->scalarNode('clientId')->defaultValue('')->end()
+            ->scalarNode('clientSecret')->defaultValue('')->end()
             ->arrayNode('scopes')->enumPrototype()->values([
                 'activity',
                 'heartrate',
@@ -37,6 +37,8 @@ class Configuration implements ConfigurationInterface
                 'social',
                 'weight',
             ])->defaultValue([])->end()
+            ->integerNode('expiresIn')->defaultValue(86400)->end()
+            ->scalarNode('redirectUrl')->defaultValue('')->end()
         ->end();
 
         return $treeBuilder;

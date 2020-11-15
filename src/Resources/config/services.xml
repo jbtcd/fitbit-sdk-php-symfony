@@ -5,6 +5,8 @@
             <argument id="$clientId" /> <!-- will be filled in with client_id dynamically -->
             <argument id="$clientSecret" /><!-- will be filled in with client_secret dynamically -->
             <argument id="$scopes" /> <!-- will be filled in with scopes dynamically -->
+            <argument id="$expiresIn" /> <!-- will be filled in with the expires in value dynamically -->
+            <argument id="$redirectUrl" /> <!-- will be filled in with the redirect url dynamically -->
         </service>
 
         <service id="fitbitBundle.dataCollector" class="FitbitBundle\DataCollector\FitbitDataCollector" public="false">
