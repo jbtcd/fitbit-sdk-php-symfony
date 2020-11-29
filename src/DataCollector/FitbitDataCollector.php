@@ -9,7 +9,7 @@ namespace FitbitBundle\DataCollector;
  * file that was distributed with this source code.
  */
 
-use jbtcd\Fitbit\Fitbit;
+use jbtcd\Fitbit\FitbitConfiguration;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\DataCollector\DataCollector;
@@ -21,10 +21,10 @@ use Symfony\Component\HttpKernel\DataCollector\DataCollector;
  */
 class FitbitDataCollector extends DataCollector
 {
-    private Fitbit $fitbit;
+    private FitbitConfiguration $fitbit;
 
     public function __construct(
-        Fitbit $fitbit
+        FitbitConfiguration $fitbit
     ) {
         $this->fitbit = $fitbit;
     }
