@@ -1,4 +1,4 @@
-<?php declare(strict_types=1);
+<?php declare(strict_types = 1);
 
 namespace FitbitBundle\DataCollector;
 
@@ -21,7 +21,7 @@ use Symfony\Component\HttpKernel\DataCollector\DataCollector;
  */
 class FitbitDataCollector extends DataCollector
 {
-    private $fitbit;
+    private Fitbit $fitbit;
 
     public function __construct(
         string $clientId,
