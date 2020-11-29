@@ -17,7 +17,7 @@
             <argument type="service" id="jbtcd.fitbit" />
         </service>
 
-        <service id="jbtcd\Fitbit\Client\FitbitUrlHelperClient">
+        <service id="jbtcd\Fitbit\Generator\UserTokenUrlGenerator">
             <argument type="service" id="jbtcd.fitbit"/>
         </service>
     </services>
