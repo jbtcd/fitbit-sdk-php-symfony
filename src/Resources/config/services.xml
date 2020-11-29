@@ -1,17 +1,35 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
-        <service id="jbtcd.fitbit" class="jbtcd\Fitbit\Fitbit" public="true">
-            <argument id="$clientId" /> <!-- will be filled in with client_id dynamically -->
-            <argument id="$clientSecret" /><!-- will be filled in with client_secret dynamically -->
-            <argument id="$scopes" /> <!-- will be filled in with scopes dynamically -->
-            <argument id="$expiresIn" /> <!-- will be filled in with the expires in value dynamically -->
-            <argument id="$redirectUrl" /> <!-- will be filled in with the redirect url dynamically -->
+        <service id="jbtcd.fitbit" class="jbtcd\Fitbit\FitbitConfiguration" public="true">
+            <argument id="$clientId"/> <!-- will be filled in with client_id dynamically -->
+            <argument id="$responseType"/><!-- will be filled in with client_secret dynamically -->
+            <argument id="$clientSecret"/><!-- will be filled in with client_secret dynamically -->
+            <argument id="$scopes"/><!-- will be filled in with client_secret dynamically -->
+
+            <call method="setRedirectUrl">
+                <argument id="$redirectUrl" on-invalid="ignore"/>
+            </call>
+            <call method="setExpiresIn">
+                <argument id="$expiresIn" on-invalid="ignore"/>
+            </call>
+            <call method="setPrompt">
+                <argument id="$prompt" on-invalid="ignore"/>
+            </call>
+            <call method="setState">
+                <argument id="$state" on-invalid="ignore"/>
+            </call>
+            <call method="setCodeChallenge">
+                <argument id="$codeChallenge" on-invalid="ignore"/>
+            </call>
+            <call method="setCodeChallengeMethod">
+                <argument id="$codeChallengeMethod" on-invalid="ignore"/>
+            </call>
         </service>
 
         <service id="fitbit_bundle.data_collector" class="FitbitBundle\DataCollector\FitbitDataCollector" public="false">
-            <tag name="data_collector" template="@Fitbit/Collector/fitbit.html.twig" id="fitbit" priority="250" />
-            <argument type="service" id="jbtcd.fitbit" />
+            <tag name="data_collector" template="@Fitbit/Collector/fitbit.html.twig" id="fitbit" priority="250"/>
+            <argument type="service" id="jbtcd.fitbit"/>
         </service>
 
         <service id="jbtcd\Fitbit\Generator\UserTokenUrlGenerator">

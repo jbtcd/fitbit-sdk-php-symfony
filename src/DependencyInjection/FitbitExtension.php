@@ -31,9 +31,15 @@ class FitbitExtension extends Extension
 
         $definition = $container->getDefinition('jbtcd.fitbit');
         $definition->setArgument('$clientId', $config['clientId']);
+        $definition->setArgument('$responseType', $config['responseType']);
         $definition->setArgument('$clientSecret', $config['clientSecret']);
         $definition->setArgument('$scopes', $config['scopes']);
+
+        $definition->setArgument('$redirectUrl', $config['$redirectUrl']);
         $definition->setArgument('$expiresIn', $config['expiresIn']);
-        $definition->setArgument('$redirectUrl', $config['redirectUrl']);
+        $definition->setArgument('$prompt', $config['prompt']);
+        $definition->setArgument('$state', $config['state']);
+        $definition->setArgument('$codeChallenge', $config['codeChallenge']);
+        $definition->setArgument('$codeChallengeMethod', $config['codeChallengeMethod']);
     }
 }

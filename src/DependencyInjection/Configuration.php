@@ -24,8 +24,9 @@ class Configuration implements ConfigurationInterface
         $treeBuilder = new TreeBuilder('fitbit');
 
         $treeBuilder->getRootNode()->children()
-            ->scalarNode('clientId')->defaultValue('')->end()
-            ->scalarNode('clientSecret')->defaultValue('')->end()
+            ->scalarNode('clientId')->end()
+            ->scalarNode('responseType')->end()
+            ->scalarNode('clientSecret')->end()
             ->arrayNode('scopes')->enumPrototype()->values([
                 'activity',
                 'heartrate',
@@ -36,9 +37,13 @@ class Configuration implements ConfigurationInterface
                 'sleep',
                 'social',
                 'weight',
-            ])->defaultValue([])->end()->end()
-            ->scalarNode('expiresIn')->defaultValue(86400)->end()
-            ->scalarNode('redirectUrl')->defaultValue('')->end()
+            ])->end()->end()
+            ->scalarNode('redirectUrl')->defaultNull()->end()
+            ->scalarNode('expiresIn')->defaultNull()->end()
+            ->scalarNode('prompt')->defaultNull()->end()
+            ->scalarNode('state')->defaultNull()->end()
+            ->scalarNode('codeChallenge')->defaultNull()->end()
+            ->scalarNode('codeChallengeMethod')->defaultNull()->end()
         ->end();
 
         return $treeBuilder;
