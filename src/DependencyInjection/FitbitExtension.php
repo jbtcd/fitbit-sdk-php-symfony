@@ -35,11 +35,11 @@ class FitbitExtension extends Extension
         $definition->setArgument('$clientSecret', $config['clientSecret']);
         $definition->setArgument('$scopes', $config['scopes']);
 
-        $definition->setArgument('$redirectUrl', $config['$redirectUrl']);
-        $definition->setArgument('$expiresIn', $config['expiresIn']);
-        $definition->setArgument('$prompt', $config['prompt']);
-        $definition->setArgument('$state', $config['state']);
-        $definition->setArgument('$codeChallenge', $config['codeChallenge']);
-        $definition->setArgument('$codeChallengeMethod', $config['codeChallengeMethod']);
+        $definition->addMethodCall('setRedirectUrl', [$config['redirectUrl']]);
+        $definition->addMethodCall('setExpiresIn', [$config['expiresIn']]);
+        $definition->addMethodCall('setPrompt', [$config['prompt']]);
+        $definition->addMethodCall('setState', [$config['state']]);
+        $definition->addMethodCall('setCodeChallenge', [$config['codeChallenge']]);
+        $definition->addMethodCall('setCodeChallengeMethod', [$config['codeChallengeMethod']]);
     }
 }
