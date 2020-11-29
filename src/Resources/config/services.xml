@@ -11,9 +11,6 @@
 
         <service id="fitbit_bundle.data_collector" class="FitbitBundle\DataCollector\FitbitDataCollector" public="false">
             <tag name="data_collector" template="@Fitbit/Collector/fitbit.html.twig" id="fitbit" priority="250" />
-            <argument id="$clientId" /> <!-- will be filled in with client_id dynamically -->
-            <argument id="$clientSecret" /><!-- will be filled in with client_secret dynamically -->
-            <argument id="$scopes" /> <!-- will be filled in with scopes dynamically -->
             <argument type="service" id="jbtcd.fitbit" />
         </service>
 
