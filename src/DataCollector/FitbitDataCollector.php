@@ -24,16 +24,9 @@ class FitbitDataCollector extends DataCollector
     private Fitbit $fitbit;
 
     public function __construct(
-        string $clientId,
-        string $clientSecret,
-        array $scopes,
         Fitbit $fitbit
     ) {
         $this->fitbit = $fitbit;
-
-        $this->data['clientId'] = $clientId;
-        $this->data['clientSecret'] = $clientSecret;
-        $this->data['scopes'] = $scopes;
     }
 
     /**
@@ -49,28 +42,19 @@ class FitbitDataCollector extends DataCollector
         return 'fitbit';
     }
 
-    public function getData(string $key)
-    {
-        if (isset($this->data[$key])) {
-            return $this->data[$key];
-        }
-
-        return null;
-    }
-
     public function getClientId(): string
     {
-        return $this->getData('clientId');
+        return $this->fitbit->getClientId();
     }
 
     public function getClientSecret(): string
     {
-        return $this->getData('clientSecret');
+        return $this->fitbit->getClientSecret();
     }
 
     public function getScopes(): array
     {
-        return $this->getData('scopes');
+        return $this->fitbit->getScopes();
     }
 
     public function hasApiCalls(): bool
