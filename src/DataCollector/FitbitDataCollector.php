@@ -34,7 +34,18 @@ class FitbitDataCollector extends DataCollector
      */
     public function collect(Request $request, Response $response, \Throwable $exception = null): void
     {
-        // TODO: Fill me
+        $this->data['fitbitConfiguration'] = [
+            'clientId' => $this->fitbit->getClientId(),
+            'expiresIn' => $this->fitbit->getExpiresIn(),
+            'redirectUrl' => $this->fitbit->getRedirectUrl(),
+            'scopes' => $this->fitbit->getScopes(),
+            'clientSecret' => $this->fitbit->getClientSecret(),
+            'codeChallenge' => $this->fitbit->getCodeChallenge(),
+            'codeChallengeMethod' => $this->fitbit->getCodeChallengeMethod(),
+            'prompt' => $this->fitbit->getPrompt(),
+            'responseType' => $this->fitbit->getResponseType(),
+            'state' => $this->fitbit->getState(),
+        ];
     }
 
     public function getName(): string
@@ -42,19 +53,9 @@ class FitbitDataCollector extends DataCollector
         return 'fitbit';
     }
 
-    public function getClientId(): string
+    public function getFitbitConfiguration(): array
     {
-        return $this->fitbit->getClientId();
-    }
-
-    public function getClientSecret(): string
-    {
-        return $this->fitbit->getClientSecret();
-    }
-
-    public function getScopes(): array
-    {
-        return $this->fitbit->getScopes();
+        return $this->data['fitbitConfiguration'];
     }
 
     public function hasApiCalls(): bool

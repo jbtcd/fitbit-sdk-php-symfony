@@ -30,24 +30,24 @@
     <h3>Configuration</h3>
     <table>
         <thead>
-            <tr>
-                <th scope="col" class="key">Key</th>
-                <th scope="col">Value</th>
-            </tr>
+        <tr>
+            <th scope="col" class="key">Key</th>
+            <th scope="col">Value</th>
+        </tr>
         </thead>
         <tbody>
-            <tr>
-                <th>clientId</th>
-                <td>{{ collector.clientId }}</td>
+        {% for key, value in collector.fitbitConfiguration  %}
+            <tr class="highlight">
+                <th>{{ key }}</th>
+                {% if value is empty %}
+                    <td class="error">{{ 'null' }}</td>
+                {% elseif value is iterable %}
+                    <td class="string">{{ value|join(', ') }}</td>
+                {% else %}
+                    <td class="string">{{ value }}</td>
+                {% endif %}
             </tr>
-            <tr>
-                <th>clientSecret</th>
-                <td>{{ collector.clientSecret }}</td>
-            </tr>
-            <tr>
-                <th>scopes</th>
-                <td>{{ collector.scopes|join(', ') }}</td>
-            </tr>
+        {% endfor %}
         </tbody>
     </table>
     <h3>API calls</h3>
