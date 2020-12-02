@@ -22,16 +22,40 @@ We accept contributions via Merge Requests on [Gitlab](https://gitlab.com/jbtcd/
 
 ## Local Development
 
-Currently, we have trouble to add an initial config file after installation, so you must add something like this to your local `services.yaml` file:
+1. Create a new symfony application:
+    ```bash
+    symfony new fitbit-bundle-development
+    ```
 
-```yaml
-fitbit:
-    clientId: 'YOUR-CLIENT-ID'
-    clientSecret: 'YOUR-CLIENT-SECRET'
-    scopes:
-        - activity
-        - heartrate
-```
+2. Add this bundle as local repository in your composer.json:
+    ```json
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../PATH/TO/LOCAL/FITBIT-BUNDLE",
+            "options": {
+                "symlink": true
+            }
+        }
+    ],
+    ```
+
+3. Define your local configuration:
+    ```yaml
+    # config/packages/fitbit.yaml
+    fitbit:
+        clientId: 'YOUR-CLIENT-ID'
+        clientSecret: 'YOUR-CLIENT-SECRET'
+        responseType: 'code'
+        scopes:
+            - activity
+            - heartrate
+    ```
+
+4. Require local fitbit-bundle:
+    ```bash
+   composer require jbtcd/fitbit-bundle:dev-main
+   ```
 
 
 ## Testing
