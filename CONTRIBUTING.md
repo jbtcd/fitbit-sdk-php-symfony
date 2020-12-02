@@ -2,7 +2,7 @@
 
 Contributions are **welcome** and will be fully **credited**.
 
-We accept contributions via Merge Requests on [Gitlab](https://gitlab.com/jbtcd/fitbit-sdk-php-symfony).
+We accept contributions via Merge Requests on [GitHub](https://github.com/jbtcd/fitbit-sdk-php-symfony).
 
 
 ## Merge Requests
