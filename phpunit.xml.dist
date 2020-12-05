@@ -8,7 +8,7 @@
          bootstrap="vendor/autoload.php"
 >
     <testsuites>
-        <testsuite name="PaypalBundleTests">
+        <testsuite name="FitbitBundleTests">
             <directory>./tests</directory>
         </testsuite>
     </testsuites>
