@@ -3,7 +3,6 @@
     <services>
         <service id="jbtcd.fitbit" class="jbtcd\Fitbit\FitbitConfiguration" public="true">
             <argument id="$clientId"/>
-            <argument id="$responseType"/>
             <argument id="$clientSecret"/>
             <argument id="$scopes"/>
         </service>
@@ -15,6 +14,34 @@
 
         <service id="jbtcd\Fitbit\Generator\UserTokenUrlGenerator">
             <argument type="service" id="jbtcd.fitbit"/>
+        </service>
+
+        <service id="jbtcd.fitbit.authorization_string_generator" class="jbtcd\Fitbit\Generator\AuthorizationStringGenerator" public="false">
+            <argument type="service" id="jbtcd.fitbit"/>
+        </service>
+
+        <service id="jbtcd.fitbit.refresh_access_token_request" class="jbtcd\Fitbit\Request\Authentication\RefreshAccessTokenRequest" public="false">
+            <argument type="service" id="jbtcd.fitbit.authorization_string_generator"/>
+            <argument type="service" id="jbtcd.fitbit"/>
+        </service>
+
+        <service id="jbtcd.fitbit.retrieve_state_of_access_token_request" class="jbtcd\Fitbit\Request\Authentication\RetrieveStateOfAccessTokenRequest" public="false" />
+
+        <service id="jbtcd.fitbit.request.authentication.fetch_access_token_request" class="jbtcd\Fitbit\Request\Authentication\FetchAccessTokenRequest" public="false" >
+            <argument type="service" id="jbtcd.fitbit.authorization_string_generator"/>
+            <argument type="service" id="jbtcd.fitbit"/>
+        </service>
+
+        <service id="jbtcd.fitbit.get_activity_time_series_request" class="jbtcd\Fitbit\Request\Activity\GetActivityTimeSeriesRequest" public="false" />
+
+        <service id="jbtcd\Fitbit\Client\FitbitStepClient">
+            <argument type="service" id="jbtcd.fitbit.refresh_access_token_request"/>
+            <argument type="service" id="jbtcd.fitbit.retrieve_state_of_access_token_request"/>
+            <argument type="service" id="jbtcd.fitbit.get_activity_time_series_request"/>
+        </service>
+
+        <service id="jbtcd\Fitbit\Client\InitialFitbitAccessTokenRequestClient">
+            <argument type="service" id="jbtcd.fitbit.request.authentication.fetch_access_token_request"/>
         </service>
     </services>
 </container>

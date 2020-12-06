@@ -25,7 +25,7 @@ class Configuration implements ConfigurationInterface
 
         $treeBuilder->getRootNode()->children()
             ->scalarNode('clientId')->end()
-            ->scalarNode('responseType')->end()
+            ->scalarNode('responseType')->defaultValue('code')->end()
             ->scalarNode('clientSecret')->end()
             ->arrayNode('scopes')->enumPrototype()->values([
                 'activity',
