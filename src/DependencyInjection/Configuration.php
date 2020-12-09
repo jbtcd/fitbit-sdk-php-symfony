@@ -44,6 +44,7 @@ class Configuration implements ConfigurationInterface
             ->scalarNode('state')->defaultNull()->end()
             ->scalarNode('codeChallenge')->defaultNull()->end()
             ->scalarNode('codeChallengeMethod')->defaultNull()->end()
+            ->scalarNode('accessTokenEntityClass')->defaultNull()->end()
         ->end();
 
         return $treeBuilder;
