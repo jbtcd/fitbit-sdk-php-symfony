@@ -41,5 +41,6 @@ class FitbitExtension extends Extension
         $definition->addMethodCall('setState', [$config['state']]);
         $definition->addMethodCall('setCodeChallenge', [$config['codeChallenge']]);
         $definition->addMethodCall('setCodeChallengeMethod', [$config['codeChallengeMethod']]);
+        $definition->addMethodCall('setAccessTokenEntityClass', [$config['accessTokenEntityClass']]);
     }
 }

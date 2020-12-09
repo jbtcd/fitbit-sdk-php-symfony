@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5549200580eba98e7acaa37643e7bed8",
+    "content-hash": "d470e48250debee633b068aca518fcff",
     "packages": [
         {
             "name": "jbtcd/fitbit",
-            "version": "0.4.0",
+            "version": "0.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jbtcd/fitbit-sdk-php.git",
-                "reference": "9228330415bbd6a9eb0508e26413b0851e3944c9"
+                "reference": "5c16b4599eb6a7ec2c6f71388914631bc7c14dc0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jbtcd/fitbit-sdk-php/zipball/9228330415bbd6a9eb0508e26413b0851e3944c9",
-                "reference": "9228330415bbd6a9eb0508e26413b0851e3944c9",
+                "url": "https://api.github.com/repos/jbtcd/fitbit-sdk-php/zipball/5c16b4599eb6a7ec2c6f71388914631bc7c14dc0",
+                "reference": "5c16b4599eb6a7ec2c6f71388914631bc7c14dc0",
                 "shasum": ""
             },
             "require": {
@@ -61,7 +61,7 @@
             ],
             "support": {
                 "issues": "https://github.com/jbtcd/fitbit-sdk-php/issues",
-                "source": "https://github.com/jbtcd/fitbit-sdk-php/tree/0.4.0"
+                "source": "https://github.com/jbtcd/fitbit-sdk-php/tree/0.5.1"
             },
             "funding": [
                 {
@@ -73,7 +73,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-12-06T23:12:43+00:00"
+            "time": "2020-12-09T14:36:20+00:00"
         },
         {
             "name": "psr/container",
