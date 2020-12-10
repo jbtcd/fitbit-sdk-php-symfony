@@ -3,6 +3,7 @@
     <services>
         <service id="jbtcd.fitbit" class="jbtcd\Fitbit\FitbitConfiguration" public="true">
             <argument id="$clientId"/>
+            <argument id="$responseType"/>
             <argument id="$clientSecret"/>
             <argument id="$scopes"/>
         </service>
