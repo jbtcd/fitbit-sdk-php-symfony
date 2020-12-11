@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d470e48250debee633b068aca518fcff",
+    "content-hash": "ceadd8a4fe6409c5b58751ab891e24a1",
     "packages": [
         {
             "name": "jbtcd/fitbit",
-            "version": "0.5.1",
+            "version": "0.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jbtcd/fitbit-sdk-php.git",
-                "reference": "5c16b4599eb6a7ec2c6f71388914631bc7c14dc0"
+                "reference": "2c05b01742935af69423236a8f6904eb80529bce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jbtcd/fitbit-sdk-php/zipball/5c16b4599eb6a7ec2c6f71388914631bc7c14dc0",
-                "reference": "5c16b4599eb6a7ec2c6f71388914631bc7c14dc0",
+                "url": "https://api.github.com/repos/jbtcd/fitbit-sdk-php/zipball/2c05b01742935af69423236a8f6904eb80529bce",
+                "reference": "2c05b01742935af69423236a8f6904eb80529bce",
                 "shasum": ""
             },
             "require": {
@@ -61,7 +61,7 @@
             ],
             "support": {
                 "issues": "https://github.com/jbtcd/fitbit-sdk-php/issues",
-                "source": "https://github.com/jbtcd/fitbit-sdk-php/tree/0.5.1"
+                "source": "https://github.com/jbtcd/fitbit-sdk-php/tree/0.6.3"
             },
             "funding": [
                 {
@@ -73,7 +73,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-12-09T14:36:20+00:00"
+            "time": "2020-12-10T23:43:29+00:00"
         },
         {
             "name": "psr/container",
@@ -2226,22 +2226,22 @@
         },
         {
             "name": "phploc/phploc",
-            "version": "7.0.1",
+            "version": "7.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phploc.git",
-                "reference": "e3c1dc59ddd33e12abf5325a3f42261b8ef26142"
+                "reference": "af0d5fc84f3f7725513ba59cdcbe670ac2a4532a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phploc/zipball/e3c1dc59ddd33e12abf5325a3f42261b8ef26142",
-                "reference": "e3c1dc59ddd33e12abf5325a3f42261b8ef26142",
+                "url": "https://api.github.com/repos/sebastianbergmann/phploc/zipball/af0d5fc84f3f7725513ba59cdcbe670ac2a4532a",
+                "reference": "af0d5fc84f3f7725513ba59cdcbe670ac2a4532a",
                 "shasum": ""
             },
             "require": {
                 "ext-dom": "*",
                 "ext-json": "*",
-                "php": "^7.3",
+                "php": ">=7.3",
                 "phpunit/php-file-iterator": "^3.0",
                 "sebastian/cli-parser": "^1.0",
                 "sebastian/version": "^3.0"
@@ -2275,7 +2275,7 @@
             "homepage": "https://github.com/sebastianbergmann/phploc",
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phploc/issues",
-                "source": "https://github.com/sebastianbergmann/phploc/tree/7.0.1"
+                "source": "https://github.com/sebastianbergmann/phploc/tree/7.0.2"
             },
             "funding": [
                 {
@@ -2283,7 +2283,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-08-18T13:31:11+00:00"
+            "time": "2020-12-07T05:51:20+00:00"
         },
         {
             "name": "phpmd/phpmd",
@@ -2437,16 +2437,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "0.12.58",
+            "version": "0.12.59",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "2a4847df6047b30af28854ed9dc95304cdb56ae5"
+                "reference": "cf4107257c8ca2ad967efdd6a00f12b21acbb779"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/2a4847df6047b30af28854ed9dc95304cdb56ae5",
-                "reference": "2a4847df6047b30af28854ed9dc95304cdb56ae5",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/cf4107257c8ca2ad967efdd6a00f12b21acbb779",
+                "reference": "cf4107257c8ca2ad967efdd6a00f12b21acbb779",
                 "shasum": ""
             },
             "require": {
@@ -2477,7 +2477,7 @@
             "description": "PHPStan - PHP Static Analysis Tool",
             "support": {
                 "issues": "https://github.com/phpstan/phpstan/issues",
-                "source": "https://github.com/phpstan/phpstan/tree/0.12.58"
+                "source": "https://github.com/phpstan/phpstan/tree/0.12.59"
             },
             "funding": [
                 {
@@ -2493,7 +2493,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-11-29T13:32:03+00:00"
+            "time": "2020-12-07T14:46:03+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -3655,21 +3655,21 @@
         },
         {
             "name": "sebastian/phpcpd",
-            "version": "6.0.2",
+            "version": "6.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpcpd.git",
-                "reference": "4f130523214c755c69d1d59297afdff206c7b029"
+                "reference": "f3683aa0db2e8e09287c2bb33a595b2873ea9176"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpcpd/zipball/4f130523214c755c69d1d59297afdff206c7b029",
-                "reference": "4f130523214c755c69d1d59297afdff206c7b029",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpcpd/zipball/f3683aa0db2e8e09287c2bb33a595b2873ea9176",
+                "reference": "f3683aa0db2e8e09287c2bb33a595b2873ea9176",
                 "shasum": ""
             },
             "require": {
                 "ext-dom": "*",
-                "php": "^7.3",
+                "php": ">=7.3",
                 "phpunit/php-file-iterator": "^3.0",
                 "phpunit/php-timer": "^5.0",
                 "sebastian/cli-parser": "^1.0",
@@ -3704,7 +3704,7 @@
             "homepage": "https://github.com/sebastianbergmann/phpcpd",
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpcpd/issues",
-                "source": "https://github.com/sebastianbergmann/phpcpd/tree/6.0.2"
+                "source": "https://github.com/sebastianbergmann/phpcpd/tree/6.0.3"
             },
             "funding": [
                 {
@@ -3712,7 +3712,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-08-18T13:27:23+00:00"
+            "time": "2020-12-07T05:39:23+00:00"
         },
         {
             "name": "sebastian/recursion-context",

@@ -8,9 +8,12 @@
             <argument id="$scopes"/>
         </service>
 
+        <service id="jbtcd.fitbit.logger.debug_stack" class="jbtcd\Fitbit\Logger\DebugStack" />
+
         <service id="fitbit_bundle.data_collector" class="FitbitBundle\DataCollector\FitbitDataCollector" public="false">
             <tag name="data_collector" template="@Fitbit/Collector/fitbit.html.twig" id="fitbit" priority="250"/>
             <argument type="service" id="jbtcd.fitbit"/>
+            <argument type="service" id="jbtcd.fitbit.logger.debug_stack"/>
         </service>
 
         <service id="jbtcd\Fitbit\Generator\UserTokenUrlGenerator">
@@ -24,16 +27,22 @@
         <service id="jbtcd.fitbit.refresh_access_token_request" class="jbtcd\Fitbit\Request\Authentication\RefreshAccessTokenRequest" public="false">
             <argument type="service" id="jbtcd.fitbit.authorization_string_generator"/>
             <argument type="service" id="jbtcd.fitbit"/>
+            <argument type="service" id="jbtcd.fitbit.logger.debug_stack"/>
         </service>
 
-        <service id="jbtcd.fitbit.retrieve_state_of_access_token_request" class="jbtcd\Fitbit\Request\Authentication\RetrieveStateOfAccessTokenRequest" public="false" />
+        <service id="jbtcd.fitbit.retrieve_state_of_access_token_request" class="jbtcd\Fitbit\Request\Authentication\RetrieveStateOfAccessTokenRequest" public="false" >
+            <argument type="service" id="jbtcd.fitbit.logger.debug_stack"/>
+        </service>
 
         <service id="jbtcd.fitbit.request.authentication.fetch_access_token_request" class="jbtcd\Fitbit\Request\Authentication\FetchAccessTokenRequest" public="false" >
             <argument type="service" id="jbtcd.fitbit.authorization_string_generator"/>
             <argument type="service" id="jbtcd.fitbit"/>
+            <argument type="service" id="jbtcd.fitbit.logger.debug_stack"/>
         </service>
 
-        <service id="jbtcd.fitbit.get_activity_time_series_request" class="jbtcd\Fitbit\Request\Activity\GetActivityTimeSeriesRequest" public="false" />
+        <service id="jbtcd.fitbit.get_activity_time_series_request" class="jbtcd\Fitbit\Request\Activity\GetActivityTimeSeriesRequest" public="false" >
+            <argument type="service" id="jbtcd.fitbit.logger.debug_stack"/>
+        </service>
 
         <service id="jbtcd\Fitbit\Client\FitbitStepClient">
             <argument type="service" id="jbtcd.fitbit.refresh_access_token_request"/>

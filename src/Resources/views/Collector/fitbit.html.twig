@@ -26,7 +26,17 @@
 {% endblock %}
 
 {% block panel %}
-    <h2>Fitbit</h2>
+    <h2>Fitbit Metrics</h2>
+    <div class="metrics">
+        <div class="metric">
+            <span class="value">{{ collector.calls|length }}</span>
+            <span class="label">API Calls</span>
+        </div>
+        <div class="metric">
+            <span class="value">{{ '%0.2f'|format(collector.totalTimeOfCalls * 1000) }} ms</span>
+            <span class="label">Time</span>
+        </div>
+    </div>
     <h3>Configuration</h3>
     <table>
         <thead>
@@ -56,6 +66,23 @@
             <p>No Fitbit API calls were made.</p>
         </div>
     {% else %}
-        {# TODO: Implement calls #}
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col" class="key">#</th>
+                    <th scope="col">Url</th>
+                    <th scope="col">Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for key, value in collector.calls %}
+                    <tr>
+                        <th>{{ key }}</th>
+                        <td class="string">{{ value['url'] }}</td>
+                        <td class="time">{{ '%0.2f'|format(value['executionMS'] * 1000) }} ms</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
     {% endif %}
 {% endblock %}

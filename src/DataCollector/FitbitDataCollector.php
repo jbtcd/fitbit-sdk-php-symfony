@@ -10,6 +10,7 @@ namespace FitbitBundle\DataCollector;
  */
 
 use jbtcd\Fitbit\FitbitConfiguration;
+use jbtcd\Fitbit\Logger\DebugStack;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\DataCollector\DataCollector;
@@ -22,11 +23,14 @@ use Symfony\Component\HttpKernel\DataCollector\DataCollector;
 class FitbitDataCollector extends DataCollector
 {
     private FitbitConfiguration $fitbit;
+    private DebugStack $debugStack;
 
     public function __construct(
-        FitbitConfiguration $fitbit
+        FitbitConfiguration $fitbit,
+        DebugStack $debugStack
     ) {
         $this->fitbit = $fitbit;
+        $this->debugStack = $debugStack;
     }
 
     /**
@@ -46,6 +50,8 @@ class FitbitDataCollector extends DataCollector
             'responseType' => $this->fitbit->getResponseType(),
             'state' => $this->fitbit->getState(),
         ];
+
+        $this->data['calls'] = $this->debugStack->calls;
     }
 
     public function getName(): string
@@ -61,6 +67,22 @@ class FitbitDataCollector extends DataCollector
     public function hasApiCalls(): bool
     {
         return isset($this->data['calls']) && !empty($this->data['calls']);
+    }
+
+    public function getCalls(): array
+    {
+        return $this->data['calls'];
+    }
+
+    public function getTotalTimeOfCalls(): float
+    {
+        $time = 0;
+
+        foreach ($this->getCalls() as $call) {
+            $time += $call['executionMS'];
+        }
+
+        return $time;
     }
 
     public function reset(): void
