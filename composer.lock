@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ceadd8a4fe6409c5b58751ab891e24a1",
+    "content-hash": "932d5f1aa1b2dc93cb39faa6e7d3a782",
     "packages": [
         {
             "name": "jbtcd/fitbit",
-            "version": "0.6.3",
+            "version": "0.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jbtcd/fitbit-sdk-php.git",
-                "reference": "2c05b01742935af69423236a8f6904eb80529bce"
+                "reference": "a6a4032eaca577d472917d40c630791066677a23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jbtcd/fitbit-sdk-php/zipball/2c05b01742935af69423236a8f6904eb80529bce",
-                "reference": "2c05b01742935af69423236a8f6904eb80529bce",
+                "url": "https://api.github.com/repos/jbtcd/fitbit-sdk-php/zipball/a6a4032eaca577d472917d40c630791066677a23",
+                "reference": "a6a4032eaca577d472917d40c630791066677a23",
                 "shasum": ""
             },
             "require": {
@@ -61,7 +61,7 @@
             ],
             "support": {
                 "issues": "https://github.com/jbtcd/fitbit-sdk-php/issues",
-                "source": "https://github.com/jbtcd/fitbit-sdk-php/tree/0.6.3"
+                "source": "https://github.com/jbtcd/fitbit-sdk-php/tree/0.7.0"
             },
             "funding": [
                 {
@@ -73,7 +73,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-12-10T23:43:29+00:00"
+            "time": "2020-12-23T23:02:22+00:00"
         },
         {
             "name": "psr/container",
@@ -757,16 +757,16 @@
         },
         {
             "name": "symfony/http-client",
-            "version": "v5.2.0",
+            "version": "v5.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-client.git",
-                "reference": "5b9fc5d85a6cec73832ff170ccd468d97dd082d9"
+                "reference": "a77cbec69ea90dea509beef29b79748c0df33a83"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-client/zipball/5b9fc5d85a6cec73832ff170ccd468d97dd082d9",
-                "reference": "5b9fc5d85a6cec73832ff170ccd468d97dd082d9",
+                "url": "https://api.github.com/repos/symfony/http-client/zipball/a77cbec69ea90dea509beef29b79748c0df33a83",
+                "reference": "a77cbec69ea90dea509beef29b79748c0df33a83",
                 "shasum": ""
             },
             "require": {
@@ -823,7 +823,7 @@
             "description": "Symfony HttpClient component",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/http-client/tree/v5.2.0"
+                "source": "https://github.com/symfony/http-client/tree/v5.2.1"
             },
             "funding": [
                 {
@@ -839,7 +839,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-11-28T13:45:20+00:00"
+            "time": "2020-12-14T10:56:50+00:00"
         },
         {
             "name": "symfony/http-client-contracts",
