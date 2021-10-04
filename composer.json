@@ -3,11 +3,11 @@
     "description": "A Symfony bundle for v1 of JBTCDs Fitbit SDK for PHP",
     "type": "symfony-bundle",
     "require": {
-        "php": "^7.4",
+        "php": "^7.4 || ^8.0",
         "symfony/config": "^5.0 || ^4.4",
         "symfony/dependency-injection": "^5.0 || ^4.4",
         "symfony/http-kernel": "^5.0 || ^4.4",
-        "jbtcd/fitbit": "^0.8.0"
+        "jbtcd/fitbit": "^0.9.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5",
