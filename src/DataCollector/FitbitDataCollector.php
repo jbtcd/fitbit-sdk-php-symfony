@@ -9,7 +9,7 @@ namespace FitbitBundle\DataCollector;
  * file that was distributed with this source code.
  */
 
-use jbtcd\Fitbit\FitbitConfiguration;
+use jbtcd\Fitbit\Configuration\FitbitConfiguration;
 use jbtcd\Fitbit\Logger\DebugStack;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
