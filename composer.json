@@ -4,9 +4,9 @@
     "type": "symfony-bundle",
     "require": {
         "php": "^7.4 || ^8.0",
-        "symfony/config": "^5.0 || ^4.4",
-        "symfony/dependency-injection": "^5.0 || ^4.4",
-        "symfony/http-kernel": "^5.0 || ^4.4",
+        "symfony/config": "^5.3 || ^4.4",
+        "symfony/dependency-injection": "^5.3 || ^4.4",
+        "symfony/http-kernel": "^5.3 || ^4.4",
         "jbtcd/fitbit": "^0.9.0"
     },
     "require-dev": {
