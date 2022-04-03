@@ -2,8 +2,8 @@
 
 # Fitbit Service Provider for Symfony
 
-[![GitHub stars](https://img.shields.io/github/stars/jbtcd/fitbit-sdk-php-symfony.svg)](https://github.com/vshymanskyy/StandWithUkraine/stargazers)
-[![GitHub issues](https://img.shields.io/github/issues/jbtcd/fitbit-sdk-php-symfony.svg)](https://github.com/vshymanskyy/StandWithUkraine/issues)
+[![GitHub stars](https://img.shields.io/github/stars/jbtcd/fitbit-sdk-php-symfony.svg)](https://github.com/jbtcd/fitbit-sdk-php-symfony/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/jbtcd/fitbit-sdk-php-symfony.svg)](https://github.com/jbtcd/fitbit-sdk-php-symfony/issues)
 [![Build Status](https://travis-ci.com/jbtcd/fitbit-sdk-php-symfony.svg?branch=main)](https://travis-ci.com/jbtcd/fitbit-sdk-php-symfony)
 [![license](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
 [![packagist](https://img.shields.io/packagist/v/jbtcd/fitbit-bundle.svg?style=flat-square)](https://packagist.org/packages/jbtcd/fitbit-bundle)
